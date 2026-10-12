@@ -1,0 +1,18 @@
+# Open Heart Gifts - deployment settings
+# Run:  npx wrangler deploy
+# Dev:  npx wrangler dev
+
+name = "open-heart-gifts"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+# Uploads index.html and the assets folder as the static site.
+[assets]
+directory = "."
+binding = "ASSETS"
+
+# KV namespace that stores every entry.
+# This namespace ID is the one from your Cloudflare dashboard.
+[[kv_namespaces]]
+binding = "Logged"
+id = "d981483c6cc6402882b93b8c3b03ea41"

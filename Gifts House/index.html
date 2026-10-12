@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Open Heart Gifts. A little kindness goes a long way. GIVE • SHARE • SMILE.">
+<title>Open Heart Gifts</title>
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/app.js"></script>
+</head>
+<body>
+<div class="age-gate" id="age-gate" aria-live="polite">
+  <div class="age-gate__panel" role="dialog" aria-modal="true" aria-labelledby="age-gate-title">
+    <p class="age-gate__eyebrow">Age check</p>
+    <h2 id="age-gate-title">Are you 18 or older?</h2>
+    <p class="age-gate__copy">Open Heart Gifts is for adults only. Please confirm before continuing.</p>
+    <div class="age-gate__actions">
+      <button class="primary age-gate__confirm" type="button" data-age-confirm="yes">Yes, I am 18+</button>
+      <button class="secondary age-gate__confirm" type="button" data-age-confirm="no">No, I’m under 18</button>
+    </div>
+  </div>
+</div>
+<a class="skip" href="#main">Skip to form</a>
+<div class="shell">
+
+<aside class="story" aria-label="Open Heart Gifts introduction">
+  <a class="brand" href="index.html">
+    <img src="assets/mark.svg" width="32" height="32" alt="">
+    Open Heart<span>gifts</span>
+  </a>
+  <div class="story-copy">
+    <p class="eyebrow">A LITTLE KINDNESS GOES A LONG WAY</p>
+    <h2>Good things<br>start with<br><em>a little kindness.</em></h2>
+    <p>Give • Share • Smile<br>Welcome to Open Heart Gifts.</p>
+  </div>
+  <div class="illustration" aria-hidden="true">
+    <div class="orbit"></div>
+    <div class="note">
+      <span class="note-label">OPEN HEART GIFTS</span>
+      <strong>Kindness<br>multiplies.</strong>
+      <div class="note-line"></div>
+      <div class="note-line short"></div>
+      <span class="check">♥</span>
+    </div>
+    <div class="small-note"><span>↗</span> Spread the joy</div>
+    <div class="spark">✳</div>
+  </div>
+  <footer class="story-footer">
+    <span>GIVE • SHARE • SMILE</span>
+    <span>✳</span>
+  </footer>
+</aside>
+
+<section class="content">
+  <header class="topbar">
+    <span class="badge">GIVE • SHARE • SMILE</span>
+    <nav class="menu" aria-label="Quick links">
+      <a href="#sign-in" data-switch="sign-in">Sign in</a>
+      <a href="#sign-up" data-switch="sign-up">Create account</a>
+      <a href="#gift" data-switch="gift">Gift form</a>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- 01 / SIGN IN -->
+    <div class="view" data-view="sign-in">
+      <p class="step">01 / SIGN IN</p>
+      <h1>Welcome back.</h1>
+      <p class="intro">Sign in to keep the kindness going.</p>
+      <form data-operation="signIn" method="post" novalidate>
+        <div class="form-error" role="alert" tabindex="-1" hidden></div>
+        <div class="field">
+          <label for="signin-email">Email address</label>
+          <div class="input-wrap">
+            <input id="signin-email" name="email" type="email" autocomplete="email" required aria-describedby="signin-email-error" placeholder="you@example.com">
+          </div>
+          <span class="field-error" id="signin-email-error"></span>
+        </div>
+        <div class="field">
+          <label for="signin-password">Password</label>
+          <div class="input-wrap">
+            <input id="signin-password" name="password" type="password" autocomplete="current-password" required aria-describedby="signin-password-error">
+            <button class="reveal" type="button" aria-label="Show password" aria-controls="signin-password" aria-pressed="false" data-reveal="signin-password">Show</button>
+          </div>
+          <span class="field-error" id="signin-password-error"></span>
+        </div>
+        <button class="primary" type="submit">Sign in<span aria-hidden="true">↗</span></button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="switch">New here? <a href="#sign-up" data-switch="sign-up">Create an account</a></p>
+    </div>
+
+    <!-- 02 / CREATE ACCOUNT -->
+    <div class="view" data-view="sign-up" hidden>
+      <p class="step">02 / CREATE ACCOUNT</p>
+      <h1>Make room for kindness.</h1>
+      <p class="intro">Create your account and let the giving begin.</p>
+      <form data-operation="signUp" method="post" novalidate>
+        <div class="form-error" role="alert" tabindex="-1" hidden></div>
+        <div class="field">
+          <label for="signup-name">Full name</label>
+          <div class="input-wrap">
+            <input id="signup-name" name="name" type="text" autocomplete="name" required aria-describedby="signup-name-error">
+          </div>
+          <span class="field-error" id="signup-name-error"></span>
+        </div>
+        <div class="field">
+          <label for="signup-email">Email address</label>
+          <div class="input-wrap">
+            <input id="signup-email" name="email" type="email" autocomplete="email" required aria-describedby="signup-email-error" placeholder="you@example.com">
+          </div>
+          <span class="field-error" id="signup-email-error"></span>
+        </div>
+        <div class="field">
+          <label for="signup-password">Password</label>
+          <div class="input-wrap">
+            <input id="signup-password" name="password" type="password" autocomplete="new-password" required minlength="12" aria-describedby="signup-password-error" aria-details="password-hint">
+            <button class="reveal" type="button" aria-label="Show password" aria-controls="signup-password" aria-pressed="false" data-reveal="signup-password">Show</button>
+          </div>
+          <span class="field-error" id="signup-password-error"></span>
+        </div>
+        <p class="hint" id="password-hint">Use at least 12 characters. Spaces and passphrases are welcome.</p>
+        <button class="primary" type="submit">Create account<span aria-hidden="true">↗</span></button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="switch">Already have an account? <a href="#sign-in" data-switch="sign-in">Sign in</a></p>
+    </div>
+
+    <!-- 03 / SUCCESS -->
+    <div class="view" data-view="success" hidden>
+      <div class="message-card">
+        <span class="message-icon" aria-hidden="true">♥</span>
+        <h2 id="success-title">Welcome to Open Heart Gifts.</h2>
+        <p id="success-message">A little kindness goes a long way.</p>
+      </div>
+      <button class="primary" type="button" data-switch="gift">Tell us a little about you<span aria-hidden="true">↗</span></button>
+      <p class="switch"><a href="#sign-in" data-switch="sign-in">Back to sign in</a></p>
+    </div>
+
+    <!-- 04 / A LITTLE ABOUT YOU -->
+    <div class="view" data-view="gift" hidden>
+      <p class="step">03 / A LITTLE ABOUT YOU</p>
+      <h1>Every good gift starts here.</h1>
+      <p class="intro">Every good gift starts with getting to know you. This will only take a minute!</p>
+
+      <div class="wizard-head">
+        <p class="wizard-count" id="gift-progress-text" aria-live="polite">Question 1 of 6</p>
+        <div class="wizard-track"><span class="wizard-bar" id="gift-progress-bar"></span></div>
+      </div>
+
+      <form id="giftForm" novalidate>
+        <div class="form-error" role="alert" tabindex="-1" hidden></div>
+
+        <div class="gift-step" data-step="1">
+          <label class="question" for="gift-name">❤️ What should we call you?</label>
+          <p class="field-note">Your name or nickname.</p>
+          <div class="field">
+            <div class="input-wrap">
+              <input id="gift-name" name="gift_name" type="text" autocomplete="nickname" required aria-describedby="gift-name-error">
+            </div>
+            <span class="field-error" id="gift-name-error"></span>
+          </div>
+        </div>
+
+        <div class="gift-step" data-step="2" hidden>
+          <label class="question" for="gift-location">❤️ Where are you joining us from?</label>
+          <p class="field-note">Your town or area.</p>
+          <div class="field">
+            <div class="input-wrap">
+              <input id="gift-location" name="gift_location" type="text" autocomplete="address-level2" required aria-describedby="gift-location-error">
+            </div>
+            <span class="field-error" id="gift-location-error"></span>
+          </div>
+        </div>
+
+        <div class="gift-step" data-step="3" hidden>
+          <p class="question" id="gift-types-label">❤️ What kind of gifts make you smile?</p>
+          <p class="field-note">Pick the one that sounds most like you.</p>
+          <div class="chips" role="radiogroup" aria-labelledby="gift-types-label">
+            <label class="chip"><input type="radio" name="gift_types" value="clothes"><span>Clothes</span></label>
+            <label class="chip"><input type="radio" name="gift_types" value="books"><span>Books</span></label>
+            <label class="chip"><input type="radio" name="gift_types" value="electronics"><span>Electronics</span></label>
+            <label class="chip"><input type="radio" name="gift_types" value="home essentials"><span>Home essentials</span></label>
+            <label class="chip"><input type="radio" name="gift_types" value="a little surprise"><span>A little surprise</span></label>
+          </div>
+          <span class="field-error" id="gift-types-error"></span>
+        </div>
+
+        <div class="gift-step" data-step="4" hidden>
+          <label class="question" for="gift-wish">❤️ What's one thing you've always wanted but haven't got around to buying?</label>
+          <p class="field-note">You never know! 🎁</p>
+          <div class="field">
+            <div class="input-wrap">
+              <input id="gift-wish" name="gift_wish" type="text">
+            </div>
+            <span class="field-error" id="gift-wish-error"></span>
+          </div>
+        </div>
+
+        <div class="gift-step" data-step="5" hidden>
+          <p class="question" id="gift-contact-label">❤️ How would you like us to reach you when a gift comes up?</p>
+          <p class="field-note">Pick one, then leave the number, page, or address we should use.</p>
+          <div class="chips" role="radiogroup" aria-labelledby="gift-contact-label">
+            <label class="chip"><input type="radio" name="gift_contact" value="whatsapp"><span>WhatsApp</span></label>
+            <label class="chip"><input type="radio" name="gift_contact" value="email"><span>Email</span></label>
+            <label class="chip"><input type="radio" name="gift_contact" value="phone call"><span>Phone call</span></label>
+            <label class="chip"><input type="radio" name="gift_contact" value="something else"><span>Something else</span></label>
+          </div>
+          <span class="field-error" id="gift-contact-error"></span>
+          <div class="field" id="gift-detail-field" hidden>
+            <label for="gift-detail" id="gift-detail-label">Your contact detail</label>
+            <div class="input-wrap">
+              <input id="gift-detail" name="gift_detail" type="text" autocomplete="off" aria-describedby="gift-detail-error">
+            </div>
+            <span class="field-error" id="gift-detail-error"></span>
+          </div>
+        </div>
+
+        <div class="gift-step" data-step="6" hidden>
+          <label class="question" for="gift-note">❤️ Anything you'd like us to know?</label>
+          <p class="field-note">Share a little wish, a thought, or simply say hello.</p>
+          <div class="field">
+            <textarea id="gift-note" name="gift_note" rows="4"></textarea>
+          </div>
+        </div>
+
+        <div class="wizard-actions">
+          <button class="secondary" type="button" id="gift-back" hidden>Back</button>
+          <button class="primary" type="submit" id="gift-next"><span id="gift-next-label">Next</span><span aria-hidden="true">↗</span></button>
+        </div>
+      </form>
+    </div>
+
+    <!-- 05 / GIFT THANK YOU -->
+    <div class="view" data-view="gift-done" hidden>
+      <div class="message-card">
+        <span class="message-icon" aria-hidden="true">❤️</span>
+        <h2 id="gift-done-title">Thank you for sharing!</h2>
+        <p>We’ve saved your answers and we’ll reach out when a gift comes up that matches your details. You’re in the loop, and we’re grateful you’re part of Open Heart Gifts.</p>
+      </div>
+      <p class="switch"><a href="#sign-in" data-switch="sign-in">Back to start</a></p>
+    </div>
+
+  </main>
+
+  <footer class="content-footer">
+    <p>Open Heart Gifts · A little kindness goes a long way.</p>
+  </footer>
+</section>
+</div>
+<noscript><div class="noscript">Open Heart Gifts needs JavaScript to sign you in and create your account.</div></noscript>
+</body>
+</html>
